@@ -11,7 +11,7 @@ By [Qin Jiang], [Qinglin Wang], [Lihua Chi], [Jie Liu]
 1. Clone repository
 
     ```bash
-    git clone https://github.com/jiangqin/CHSTT.git
+    git clone https://github.com/jiangqin567/CHSTT.git
     ```
 
 2. Install dependent packages
