@@ -1,0 +1,49 @@
+name: test_CHSTT_VSR_x4_REDS4
+model_type: VDNModel
+scale: 4
+num_gpu: 4  # set num_gpu: 0 for cpu mode
+manual_seed: 0
+nonblind_denoising: false
+window_size: [2, 8, 8]
+
+datasets:
+  test:
+    name: REDS4
+    type: VideoDenoising_DeblurringTestDataset
+    dataroot_gt: ~/datasets/REDS4/val/val_sharp
+    dataroot_lq: ~/datasets/REDS4/val/val_sharp_bicubic/X4/
+    io_backend:
+      type: disk
+    cache_data: false
+    test_mode: true
+    num_frame: -1
+
+# network structures
+network_g:
+  type: CHSTT
+  spynet_pretrained: '~/pretrained_models/spynet_20210409-c6c1bd09.pth'
+  scale: 4
+
+# path
+path:
+  pretrain_network_g: ~
+  strict_load_g: true
+  root: ~/CHSTT
+
+# validation settings
+val:
+  save_img: False #True #
+  suffix: ~  # add suffix to saved images, if None, use exp name
+  tile: [0, 0, 0]   #test_frames, each_frame_size
+  tile_overlap: [2, 20, 20]  #test_frames_overlap ,each_frame_overlap
+
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr # calculate_ssim #
+      crop_border: 0
+      test_y_channel: False #True
+    ssim: # metric name, can be arbitrary
+      type: calculate_ssim # calculate_ssim #
+      crop_border: 0
+      test_y_channel: False #True

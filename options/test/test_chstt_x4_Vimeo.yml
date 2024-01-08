@@ -1,0 +1,45 @@
+name: test_ftvsr_Vid4
+model_type: VRTModel
+scale: 4
+num_gpu: 4  # set num_gpu: 0 for cpu mode
+manual_seed: 0
+#crop: ture
+
+datasets:
+  test:
+    name: Vimeo90K
+    type: VideoTestVimeo90KDataset
+    dataroot_gt: /home/jq/Trans/VSR-Transformer-main/data/vimeo_septuplet/sequences
+    dataroot_lq: /home/jq/Trans/VSR-Transformer-main/data/vimeo_septuplet/sequencesLR
+    meta_info_file: basicsr/data/meta_info/meta_info_Vimeo90K_test_GT.txt
+    io_backend:
+      type: disk
+    cache_data: false
+    test_mode: true
+    lq_size: 64
+    num_frame: 7
+
+
+# network structures
+network_g:
+  type: CHSTT
+  spynet_pretrained: '/home/jq/Trans/VRT/pretrained_models/spynet_20210409-c6c1bd09.pth'
+
+# path
+path:
+  pretrain_network_g: /home/jq/Trans/CHSTT/pretrained_models/final_models/vimeo/BD/vimeo_bd_x4.pth
+  strict_load_g: true
+  root: /home/jq/Trans/CHT
+
+# validation settings
+val:
+  save_img: False #True #
+  suffix: ~  # add suffix to saved images, if None, use exp name
+  flip_seq: true
+  center_frame_only: true
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr # calculate_ssim #
+      crop_border: 0
+      test_y_channel: True #True
