@@ -26,7 +26,7 @@ By [Qin Jiang], [Qinglin Wang], [Lihua Chi], [Jie Liu]
 
 ## Video Super-Resolution
 1. Training set
-	* [REDS](https://seungjunnah.github.io/Datasets/reds.html) dataset. We regroup the training and validation dataset into one folder. The original training dataset has 240 clips from 000 to 239. The original validation dataset were renamed from 240 to 269.
+	* [REDS] (https://seungjunnah.github.io/Datasets/reds.html) dataset. We regroup the training and validation dataset into one folder. The original training dataset has 240 clips from 000 to 239. The original validation dataset were renamed from 240 to 269.
 		- Make REDS structure be:
 	    ```
 			├────REDS
