@@ -88,11 +88,11 @@ By [Qin Jiang], [Qinglin Wang], [Lihua Chi], [Jie Liu]
 ## Video Denoising
 
 1. Training set
-    * DAVIS_train
+    * [DAVIS_train][https://davischallenge.org/davis2017/code.html]
    
 2. Testing set
-    * DAVIS_test
-    * Set8
+    * [DAVIS_test][https://davischallenge.org/davis2017/code.html]
+    * Set8[
 
 ## Testing
 
