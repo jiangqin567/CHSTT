@@ -92,7 +92,7 @@ By [Qin Jiang], [Qinglin Wang], [Lihua Chi], [Jie Liu]
    
 2. Testing set
     * [DAVIS_test][https://davischallenge.org/davis2017/code.html]
-    * Set8[
+    * Set8 is composed of 8 sequences: 4 sequences from the Derf 480p testset ("tractor", "touchdown", "park_joy", "sunflower") plus other 4 540p sequences. You can find these under the test_sequences folder here[https://drive.google.com/drive/folders/11chLkbcX-oKGLOLONuDpXZM2-vujn_KD]
 
 ## Testing
 
