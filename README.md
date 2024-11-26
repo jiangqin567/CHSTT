@@ -80,10 +80,10 @@ By [Qin Jiang], [Qinglin Wang], [Lihua Chi], [Jie Liu]
         ```
 ## Video Deblurring
 1.  Training set
-    * DVD_train(https://www.cs.ubc.ca/labs/imager/tr/2017/DeepVideoDeblurring)
+    * [DVD_train](https://www.cs.ubc.ca/labs/imager/tr/2017/DeepVideoDeblurring)
     
 2. Testing set
-    * DVD_test(https://www.cs.ubc.ca/labs/imager/tr/2017/DeepVideoDeblurring)
+    * [DVD_test](https://www.cs.ubc.ca/labs/imager/tr/2017/DeepVideoDeblurring)
    
 ## Video Denoising
 
